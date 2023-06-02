@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Date Example</title>
+<style>
+body {
+      text-align: center;
+    }
+    .list-container {
+      text-align: center;
+      display: inline-block;
+    }
+    </style>
+</head>
+<body>
+ <h1 style="text-decoration: underline; color: violet;">JAVASCRIPT TASK-1</h1>
+
+  <div class="list-container">
+    <button id="showDateButton">Show Date</button>
+    <br><br>
+    <div id="dateDisplay"></div>
+    
+    <button id="showTimeButton">Show Time</button>
+    <br><br>
+    <div id="timeDisplay"></div>
+
+    <script>
+        const showDateButton = document.getElementById('showDateButton');
+        const dateDisplay = document.getElementById('dateDisplay');
+
+        showDateButton.addEventListener('click', function() {
+            const currentDate = new Date();
+            const dateString = currentDate.toDateString();
+
+            dateDisplay.textContent = 'Today\'s date is: ' + dateString;
+        });
+
+        const showTimeButton = document.getElementById('showTimeButton');
+        const timeDisplay = document.getElementById('timeDisplay');
+
+        showTimeButton.addEventListener('click', function() {
+            const currentTime = new Date();
+            const timeString = currentTime.toLocaleTimeString();
+
+            timeDisplay.textContent = 'The current time is: ' + timeString;
+        });
+    </script>
+    </div>
+</body>
+</html>
